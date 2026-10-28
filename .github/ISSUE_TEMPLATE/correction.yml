@@ -1,0 +1,43 @@
+name: Suggest a correction
+description: Report a wrong, missing or outdated figure on igavemore.com
+title: "Correction: "
+labels: ["correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping keep the data accurate. Every figure on igavemore.com needs a public source, so please include one.
+        This issue is public: don't include personal information.
+  - type: input
+    id: person
+    attributes:
+      label: Person
+      description: Whose page is this about?
+      placeholder: e.g. Warren Buffett
+    validations:
+      required: true
+  - type: textarea
+    id: figure
+    attributes:
+      label: What is wrong or missing?
+      description: The figure as shown on the site, and the year it belongs to.
+    validations:
+      required: true
+  - type: textarea
+    id: correct
+    attributes:
+      label: What should it be?
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source URL
+      description: A public page that supports the correction (filing, press release, foundation report).
+      placeholder: https://
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else?
